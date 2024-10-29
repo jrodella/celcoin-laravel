@@ -10,7 +10,7 @@ class PixReceivementStatus extends Data
 
     public int $transactionId;
 
-    public int $transactionIdBrCode;
+    public string $transactionIdBrCode;
 
     public function __construct(array $data = [])
     {

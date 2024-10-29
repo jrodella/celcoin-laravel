@@ -107,10 +107,13 @@ class CelcoinBAASPIX extends CelcoinBaseApi
         );
     }
 
-    public function searchPixKey(string $account)
+    public function searchPixKey(string $account, string $key)
     {
         return $this->get(
-            sprintf(self::SEARCH_PIX_KEY_ENDPOINT, $account)
+            sprintf(self::SEARCH_PIX_KEY_ENDPOINT, $account),
+            [
+                'key' => $key,
+            ]
         );
     }
 

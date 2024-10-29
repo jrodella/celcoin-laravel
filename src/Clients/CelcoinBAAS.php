@@ -23,7 +23,7 @@ use WeDevBr\Celcoin\Types\BAAS\AccountRelease;
  */
 class CelcoinBAAS extends CelcoinBaseApi
 {
-    public const CREATE_ACCOUNT_NATURAL_PERSON = '/baas-onboarding/v1/account/natural-person/create';
+    public const CREATE_ACCOUNT_NATURAL_PERSON = '/onboarding/v1/onboarding-proposal/natural-person';
 
     public const UPDATE_ACCOUNT_NATURAL_PERSON = '/baas-accountmanager/v1/account/natural-person?Account=%s&DocumentNumber=%s';
 
@@ -31,7 +31,7 @@ class CelcoinBAAS extends CelcoinBaseApi
 
     public const GET_LIST_INFO_ACCOUNT_NATURAL_PERSON = '/baas-accountmanager/v1/account/fetch-all';
 
-    public const CREATE_ACCOUNT_BUSINESS = '/baas-onboarding/v1/account/business/create';
+    public const CREATE_ACCOUNT_BUSINESS = '/onboarding/v1/onboarding-proposal/legal-person';
 
     public const UPDATE_ACCOUNT_BUSINESS = '/baas-accountmanager/v1/account/business?Account=%s&DocumentNumber=%s';
 
@@ -61,7 +61,7 @@ class CelcoinBAAS extends CelcoinBaseApi
 
         return $this->post(
             self::CREATE_ACCOUNT_NATURAL_PERSON,
-            $body
+            $data->toArray()
         );
     }
 
@@ -97,7 +97,7 @@ class CelcoinBAAS extends CelcoinBaseApi
 
         return $this->post(
             self::CREATE_ACCOUNT_BUSINESS,
-            $body
+            $data->toArray()
         );
     }
 

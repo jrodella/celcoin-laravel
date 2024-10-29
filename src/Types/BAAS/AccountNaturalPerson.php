@@ -9,7 +9,7 @@ class AccountNaturalPerson extends Data
 {
     public string $clientCode;
 
-    public AccountOnboardingTypeEnum $accountOnboardingType;
+    public AccountOnboardingTypeEnum $onboardingType;
 
     public string $documentNumber;
 

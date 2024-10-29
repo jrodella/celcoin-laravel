@@ -76,7 +76,12 @@ abstract class Data implements Arrayable
             } elseif ($value instanceof UnitEnum) {
                 $value = $value->value;
             }
-            $array[$key] = $value;
+            if(preg_match('~^\p{Lu}~u', $key)) {
+                $key = lcfirst($key);
+            }
+            if ($key != 'attributes') {
+                $array[$key] = $value;
+            }
         }
 
         return $array;

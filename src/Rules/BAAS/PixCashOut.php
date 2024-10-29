@@ -89,7 +89,7 @@ class PixCashOut
             [
                 'transactionIdentification' => ['required', 'string', 'size:25'],
                 'endToEndId' => ['required'],
-                'creditParty.*' => ['required', 'array'],
+                'creditParty' => ['required', 'array'],
                 'creditParty.key' => ['required'],
             ]
         );
@@ -102,7 +102,7 @@ class PixCashOut
             [
                 'transactionIdentification' => ['required', 'string', 'min:26', 'min:35'],
                 'endToEndId' => ['required'],
-                'creditParty.*' => ['required', 'array'],
+                'creditParty' => ['required', 'array'],
                 'creditParty.key' => ['required'],
             ]
         );
