@@ -1,5 +1,5 @@
 {
-    "name": "wedevbr/celcoin-laravel",
+    "name": "jrodella/celcoin-laravel",
     "description": "Celcoin API wrapper",
     "type": "library",
     "license": "MIT",
