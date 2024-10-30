@@ -11,7 +11,7 @@ class AccountNaturalPerson
     {
         return [
             'clientCode' => ['required', 'string'],
-            'accountOnboardingType' => ['required', Rule::in(array_column(AccountOnboardingTypeEnum::cases(), 'value'))],
+            'onboardingType' => ['required', Rule::in(array_column(AccountOnboardingTypeEnum::cases(), 'value'))],
             'documentNumber' => ['required', 'max_digits:11'],
             'phoneNumber' => ['required', 'starts_with:+', 'regex:/(\+55)\d{10,11}/'],
             'email' => ['required', 'email'],
