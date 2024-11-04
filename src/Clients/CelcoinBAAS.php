@@ -39,6 +39,8 @@ class CelcoinBAAS extends CelcoinBaseApi
 
     public const GET_LIST_INFO_ACCOUNT_BUSINESS = '/baas-accountmanager/v1/account/fetch-all-business';
 
+    public const GET_PROPOSAL_FILES = '/onboarding/v1/onboarding-proposal/files';
+
     public const ACCOUNT_CHECK = '/baas-onboarding/v1/account/check';
 
     public const DISABLE_ACCOUNT = '/baas-accountmanager/v1/account/status?Account=%s&DocumentNumber=%s';
@@ -124,6 +126,14 @@ class CelcoinBAAS extends CelcoinBaseApi
         return $this->get(
             self::GET_LIST_INFO_ACCOUNT_BUSINESS,
             ['DateFrom' => $dateFrom->format('Y-m-d'), 'DateTo' => $dateTo->format('Y-m-d'), 'Page' => $page, 'Limite' => $limit]
+        );
+    }
+
+    public function getProposalFiles(?string $proposalId = null, ?string $clientCode = null)
+    {
+        return $this->get(
+            self::GET_PROPOSAL_FILES,
+            ['ProposalId' => $proposalId, 'ClientCode' => $clientCode]
         );
     }
 
