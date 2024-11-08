@@ -3,6 +3,7 @@
 namespace WeDevBr\Celcoin\Types\BAAS;
 
 use WeDevBr\Celcoin\Enums\AccountOnboardingTypeEnum;
+use WeDevBr\Celcoin\Enums\CompanyTypeEnum;
 use WeDevBr\Celcoin\Types\Data;
 
 class AccountBusiness extends Data
@@ -20,6 +21,8 @@ class AccountBusiness extends Data
     public string $businessName;
 
     public string $tradingName;
+
+    public CompanyTypeEnum $companyType;
 
     // /** @var Owner[] */
     public ?array $owner;

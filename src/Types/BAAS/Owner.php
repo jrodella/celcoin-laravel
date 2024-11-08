@@ -2,6 +2,7 @@
 
 namespace WeDevBr\Celcoin\Types\BAAS;
 
+use WeDevBr\Celcoin\Enums\OwnerTypeEnum;
 use WeDevBr\Celcoin\Types\Data;
 
 class Owner extends Data
@@ -21,6 +22,8 @@ class Owner extends Data
     public string $birthDate;
 
     public ?Address $address;
+
+    public OwnerTypeEnum $ownerType;
 
     public bool $isPoliticallyExposedPerson;
 
