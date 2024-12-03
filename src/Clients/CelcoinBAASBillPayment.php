@@ -43,7 +43,7 @@ class CelcoinBAASBillPayment extends CelcoinBaseApi
 
         return $this->get(
             self::GET_PAYMENT_STATUS,
-            $query
+            $paymentStatusRequest->toArray()
         );
     }
 }

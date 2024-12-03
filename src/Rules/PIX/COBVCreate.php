@@ -17,11 +17,11 @@ class COBVCreate
             'debtor.name' => ['required'],
             'debtor.cpf' => ['sometimes', 'required_without:debtor.cnpj'],
             'debtor.cnpj' => ['sometimes', 'required_without:debtor.cpf'],
-            'debtor.city' => ['required'],
-            'debtor.publicArea' => ['required'],
-            'debtor.state' => ['required'],
-            'debtor.postalCode' => ['required'],
-            'debtor.email' => ['required', 'email'],
+            'debtor.city' => ['sometimes'],
+            'debtor.publicArea' => ['sometimes'],
+            'debtor.state' => ['sometimes'],
+            'debtor.postalCode' => ['sometimes'],
+            'debtor.email' => ['sometimes', 'email'],
             'receiver' => ['required', 'array'],
             'receiver.name' => ['required'],
             'receiver.cpf' => ['sometimes', 'required_without:debtor.cnpj'],
@@ -39,6 +39,7 @@ class COBVCreate
             'additionalInformation' => ['sometimes', 'required', 'array'],
             'payerQuestion' => ['sometimes', 'required'],
             'key' => ['required'],
+            'locationId' => ['required', 'integer'],
         ];
     }
 }

@@ -60,6 +60,8 @@ class Auth
         $this->clientId = $this->clientId ?? config('celcoin')['client_id'];
         $this->clientSecret = $this->clientSecret ?? config('celcoin')['client_secret'];
         $this->mtlsPassphrase = $this->mtlsPassphrase ?? config('celcoin.mtls_passphrase');
+        $this->mtlsCert = $this->mtlsCert ?? config('celcoin.mtls_cert_path') ?? null;
+        $this->mtlsKey = $this->mtlsCert ?? config('celcoin.mtls_key_path') ?? null;
 
         return $this;
     }
