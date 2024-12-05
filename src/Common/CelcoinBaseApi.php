@@ -81,7 +81,7 @@ class CelcoinBaseApi
             ->asJson()
             ->acceptJson();
 
-        if ($this->mtlsCert && $this->mtlsKey && $this->mtlsPassphrase) {
+        if ($this->mtlsCert) {
             $request = $this->setRequestMtls($request);
         }
 
@@ -101,7 +101,7 @@ class CelcoinBaseApi
             ->asJson()
             ->acceptJson();
 
-        if ($this->mtlsCert && $this->mtlsKey && $this->mtlsPassphrase) {
+        if ($this->mtlsCert) {
             $request = $this->setRequestMtls($request);
         }
 
@@ -139,7 +139,7 @@ class CelcoinBaseApi
             ->asJson()
             ->acceptJson();
 
-        if ($this->mtlsCert && $this->mtlsKey && $this->mtlsPassphrase) {
+        if ($this->mtlsCert) {
             $request = $this->setRequestMtls($request);
         }
 
@@ -163,7 +163,7 @@ class CelcoinBaseApi
             ->acceptJson()
             ->bodyFormat($body_format);
 
-        if ($this->mtlsCert && $this->mtlsKey && $this->mtlsPassphrase) {
+        if ($this->mtlsCert) {
             $request = $this->setRequestMtls($request);
         }
 
@@ -180,7 +180,7 @@ class CelcoinBaseApi
         $token = $this->getToken() ?? $this->auth->getToken();
         $request = Http::withToken($token);
 
-        if ($this->mtlsCert && $this->mtlsKey && $this->mtlsPassphrase) {
+        if ($this->mtlsCert) {
             $request = $this->setRequestMtls($request);
         }
 
