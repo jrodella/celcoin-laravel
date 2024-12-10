@@ -12,11 +12,11 @@ class COB extends Data
 
     public string $key;
 
-    public string $locationId;
+    public int $locationId;
 
     public Debtor $debtor;
 
-    public Amount|float $amount;
+    public Amount|float|string $amount;
 
     public Calendar $calendar;
 
