@@ -11,8 +11,8 @@ class ReceiverRules
     {
         return [
             'name' => ['required'],
-            'cpf' => ['sometimes', 'required_without:debtor.cnpj'],
-            'cnpj' => ['sometimes', 'required_without:debtor.cpf'],
+            'cpf' => ['sometimes', 'required_without:cnpj'],
+            'cnpj' => ['sometimes', 'required_without:cpf'],
             'postalCode' => ['required'],
             'city' => ['required'],
             'publicArea' => ['required'],
