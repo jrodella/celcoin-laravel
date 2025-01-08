@@ -6,7 +6,7 @@ use WeDevBr\Celcoin\Types\Data;
 
 class AmountFine extends Data
 {
-    public bool $hasAbatement;
+    public bool $hasFine;
 
     public string $amountPerc;
 
