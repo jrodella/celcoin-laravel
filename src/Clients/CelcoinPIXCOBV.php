@@ -16,7 +16,7 @@ class CelcoinPIXCOBV extends CelcoinBaseApi
 {
     public const CREATE_COBV_PIX = '/pix/v1/collection/duedate';
 
-    public const GET_COBV_PIX = '/pix/v1/collection/duedate';
+    public const GET_COBV_PIX = '/pix/v1/collection/pi/duedate';
 
     public const PAYLOAD_COBV_PIX = '/pix/v1/collection/duedate/payload/%s';
 
