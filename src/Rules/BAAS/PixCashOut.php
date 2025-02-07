@@ -100,7 +100,7 @@ class PixCashOut
         return array_merge(
             self::defaultRules(),
             [
-                'transactionIdentification' => ['required', 'string', 'min:26', 'min:35'],
+                'transactionIdentification' => ['required', 'string', 'min:26', 'max:35'],
                 'endToEndId' => ['required'],
                 'creditParty' => ['required', 'array'],
                 'creditParty.key' => ['required'],
