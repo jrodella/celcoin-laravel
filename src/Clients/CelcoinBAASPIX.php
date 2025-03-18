@@ -43,11 +43,11 @@ class CelcoinBAASPIX extends CelcoinBaseApi
 
     public const STATUS_REFUND_PIX_ENDPOINT = '/baas-wallet-transactions-webservice/v1/pix/reverse/status';
 
-    public const CLAIM_DICT = '/celcoin-baas-pix-dict-webservice/pix/v1/dict/claim';
+    public const CLAIM_DICT = '/celcoin-baas-pix-dict-webservice/v1/pix/dict/claim';
 
-    public const CLAIM_CONFIRM = '/celcoin-baas-pix-dict-webservice/pix/v1/dict/claim/confirm';
+    public const CLAIM_CONFIRM = '/celcoin-baas-pix-dict-webservice/v1/pix/dict/claim/confirm';
 
-    public const CLAIM_CANCEL = '/celcoin-baas-pix-dict-webservice/pix/v1/dict/claim/cancel';
+    public const CLAIM_CANCEL = '/celcoin-baas-pix-dict-webservice/v1/pix/dict/claim/cancel';
 
     public const CLAIM_LIST = '/celcoin-baas-pix-dict-webservice/v1/pix/dict/claim/list';
 
@@ -107,13 +107,15 @@ class CelcoinBAASPIX extends CelcoinBaseApi
         );
     }
 
-    public function searchPixKey(string $account, string $key)
+    public function searchPixKey(string $account, string $key = '')
     {
+        $payload = [
+            'key' => $key,
+        ];
+
         return $this->get(
             sprintf(self::SEARCH_PIX_KEY_ENDPOINT, $account),
-            [
-                'key' => $key,
-            ]
+            array_filter($payload)
         );
     }
 
