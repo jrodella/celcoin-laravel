@@ -11,6 +11,8 @@ class EditWebhooks extends Data
 
     public string $webhookUrl;
 
+    public string $subscriptionId;
+
     public ?Auth $auth;
 
     public ?bool $active;
