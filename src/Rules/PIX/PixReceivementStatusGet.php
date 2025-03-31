@@ -10,9 +10,10 @@ class PixReceivementStatusGet
     public static function rules(): array
     {
         return [
-            'endtoEndId' => ['required_without_all:transactionId,transactionIdBrCode', 'string'],
-            'transactionId' => ['required_without_all:endtoEndId,transactionIdBrCode', 'integer'],
-            'transactionIdBrCode' => ['required_without_all:endtoEndId,transactionId', 'string'],
+            'endtoEnd' => ['required_without_all:transactionId,transactionIdBrCode,clientRequestId', 'string'],
+            'transactionId' => ['required_without_all:endtoEnd,transactionIdBrCode,clientRequestId', 'integer'],
+            'transactionIdBrCode' => ['required_without_all:endtoEnd,transactionId,clientRequestId', 'string'],
+            'clientRequestId' => ['required_without_all:endtoEnd,transactionId,transactionIdBrCode', 'string'],
         ];
     }
 }

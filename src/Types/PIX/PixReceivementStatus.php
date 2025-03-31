@@ -6,11 +6,13 @@ use WeDevBr\Celcoin\Types\Data;
 
 class PixReceivementStatus extends Data
 {
-    public string $endtoEndId;
+    public string $endtoEnd;
 
     public int $transactionId;
 
     public string $transactionIdBrCode;
+
+    public string $clientRequestId;
 
     public function __construct(array $data = [])
     {

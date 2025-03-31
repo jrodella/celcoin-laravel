@@ -10,7 +10,7 @@ use WeDevBr\Celcoin\Types\PIX\PixReceivementStatus;
 
 class CelcoinPIXReceivement extends CelcoinBaseApi
 {
-    public const PIX_RECEIVEMENT_STATUS_ENDPOINT = '/pix/v1/receivement/status';
+    public const PIX_RECEIVEMENT_STATUS_ENDPOINT = '/pix/v2/receivement/v2/status';
 
     /**
      * @throws RequestException
