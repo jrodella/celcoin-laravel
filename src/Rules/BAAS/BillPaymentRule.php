@@ -10,7 +10,7 @@ class BillPaymentRule
     public static function rules(): array
     {
         return [
-            'clientRequestId' => ['required', 'string', 'max:20'],
+            'clientRequestId' => ['required', 'string', 'max:36'],
             'amount' => ['required', 'decimal:0,2', 'min: 0.01'],
             'account' => ['required', 'string', 'numeric'],
             'transactionIdAuthorize' => ['required', 'integer'],
