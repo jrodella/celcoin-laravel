@@ -40,10 +40,13 @@ class CelcoinBAASBillPayment extends CelcoinBaseApi
     public function getPaymentStatus(GetPaymentStatusRequest $paymentStatusRequest): mixed
     {
         $query = Validator::validate($paymentStatusRequest->toArray(), GetPaymentStatusRule::rules());
-
+        $body = collect([
+            'id' => $paymentStatusRequest->id,
+            'clientRequestId' => $paymentStatusRequest->clientRequestId,
+        ])->filter()->toArray();
         return $this->get(
             self::GET_PAYMENT_STATUS,
-            $paymentStatusRequest->toArray()
+            $body
         );
     }
 }
